@@ -7,6 +7,7 @@ public class FindithBit {
         System.out.println(getIthBit(num,i));
     }
     private static int getIthBit(int num, int i) {
+
         return ((num & (1<<(i-1)) >> (i-1)));
     }
 }
