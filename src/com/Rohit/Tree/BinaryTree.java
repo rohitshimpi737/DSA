@@ -23,7 +23,6 @@ public class BinaryTree {
            int val= scanner.nextInt();
             root= new Node(val);
             populate(scanner,root);
-
         }
 
         private void populate(Scanner scanner, Node node) {
@@ -116,5 +115,4 @@ public class BinaryTree {
         postOrder(node.right);
         System.out.print(node.value + " ");
     }
-
 }

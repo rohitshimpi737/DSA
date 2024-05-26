@@ -29,7 +29,6 @@ public class MinimumWindowSubstring {
             } else {
                 W.put(ch, 1);
             }
-
             if (W.containsKey(ch) && T.get(ch) == W.get(ch)) {
                 have += 1;
             }

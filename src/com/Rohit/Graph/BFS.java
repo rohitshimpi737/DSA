@@ -97,9 +97,9 @@ public class BFS {
         boolean [] visited= new boolean[V];
         boolean [] visited1= new boolean[V];
         createGraph(gh);
-//        bfs(gh,V,visited,0);
+        bfs(gh,V,visited,0);
 //        System.out.println();
-            allpath(gh,visited,1,7);
+//            allpath(gh,visited,1,7);
 //
 //        for (int i = 0; i < V; i++) {
 //            if (visited[i]==false){

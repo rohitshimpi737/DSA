@@ -1,6 +1,5 @@
 package com.Rohit.Tree;
 
-import javax.swing.tree.TreeNode;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -15,8 +14,7 @@ public class BST {
         private int height;
 
         public Node(int val) {
-            this.value = val;
-        }
+            this.value = val;}
 
         public int getValue() {
             return value;
@@ -32,7 +30,7 @@ public class BST {
         return root;
     }
 
-    public int heigth(Node node) {
+    public int heigth(Node node){
         if (node == null) {
             return -1;
         }
@@ -47,7 +45,7 @@ public class BST {
         root = insert(val, root);
     }
 
-    private Node insert(int value, Node node) {
+    private Node insert(int value, Node node){
         if (node == null) {
             node = new Node(value);
             return node;
