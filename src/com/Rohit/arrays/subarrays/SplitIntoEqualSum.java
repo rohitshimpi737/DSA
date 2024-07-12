@@ -34,9 +34,39 @@ public class SplitIntoEqualSum {
         }
     }
 
+    public  static List<List<Integer>> split2(int[] nums){
+        int totalSum=0;
+        int index=-1;
+        for (int num : nums) {
+            totalSum += num;
+        }
+        int prefixSum=0;
+        for (int i = 0; i <nums.length ; i++) {
+            prefixSum+=nums[i];
+            int suffixSum=totalSum-prefixSum;
+            if (prefixSum==suffixSum){
+                index=i;
+                break;
+            }
+        }
+        List<List<Integer>> list = new ArrayList<>();
+        if (index != -1) {
+            List<Integer> subarray1 = new ArrayList<>();
+            List<Integer> subarray2 = new ArrayList<>();
+            for (int i = 0; i <= index; i++) {
+                subarray1.add(nums[i]);
+            }
+            for (int i = index + 1; i < nums.length; i++) {
+                subarray2.add(nums[i]);
+            }
+            list.add(subarray1);
+            list.add(subarray2);
+        }
+        return list;
+    }
     public static void main(String[] args) {
-        int[] nums = {1,2,2,1};
-        List<List<Integer>> result = split(nums);
+        int[] nums = {1 , 2 , 3 , 4 , 5 , 5 };
+        List<List<Integer>> result = split2(nums);
         System.out.println(result);
     }
 }
