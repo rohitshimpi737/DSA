@@ -1,4 +1,4 @@
-package com.Rohit.arrays;
+package com.Rohit.arrays.Practice;
 
 public class RotateArray {
     public static void main(String[] args) {

@@ -1,6 +1,7 @@
 package com.Rohit.Stacks;
 
 public class StackUsingLinkedList {
+
     private static class Node{
        private int val;
        private Node next;

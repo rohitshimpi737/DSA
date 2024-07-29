@@ -60,6 +60,7 @@ public class SinglyQuestion {
         temp.next=temp.next.next;
         return head;
     }
+
     public static Node RemoventhNodeLastOneTraverse(Node head,int n) {
         Node slow=head;
         Node fast=head;

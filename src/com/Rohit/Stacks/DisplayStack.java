@@ -26,7 +26,6 @@ public class DisplayStack {
         if(gt.size()==0){
             return;
         }
-
         int top=gt.pop();
         reverseRec(gt);
         pushAtBottomRec(gt,top);

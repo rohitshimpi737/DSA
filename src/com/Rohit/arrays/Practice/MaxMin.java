@@ -1,4 +1,4 @@
-package com.Rohit.arrays;
+package com.Rohit.arrays.Practice;
 
 public class MaxMin {
     public static void maxArray(int []arr ){

@@ -4,11 +4,9 @@ public class LongestPalindromicSubstrings {
     static String ans="";
     public static String findAllPalindromicSubstrings(String str) {
         int n = str.length();
-
         for (int i = 0; i < n; i++) {
             // Odd-length palindromes with center at i
             expandPalindrome(str,  i, i);
-
             // Even-length palindromes with center between i and i+1
             expandPalindrome(str,  i, i + 1);
         }

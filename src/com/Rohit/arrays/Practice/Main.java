@@ -1,5 +1,5 @@
-package com.Rohit.arrays;
-import static com.Rohit.arrays.MaxMin.*;
+package com.Rohit.arrays.Practice;
+import static com.Rohit.arrays.Practice.MaxMin.*;
 public class Main {
 
     public  static void printIntArray(int []arr){

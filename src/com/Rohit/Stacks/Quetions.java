@@ -49,20 +49,16 @@ public class Quetions {
     }
     public static boolean balancedBracket(String S ){
         Stack<Character> st=new Stack<>();
-        for (int i = 0; i <S.length() ; i++) {
-           char ch=S.charAt(i);
-
+        for (char ch:S.toCharArray()) {
            if(ch=='('){
                st.push(ch);
            }
            else {
-               if(st.size()==0) return false;
+               if(st.isEmpty()) return false;
                if(st.peek()=='(') st.pop();
            }
         }
-        if(st.size()>0) return false;
-        else return true;
-
+        return st.isEmpty();
     }
     public static void main(String[] args) {
 //        Scanner sc=new Scanner(System.in);

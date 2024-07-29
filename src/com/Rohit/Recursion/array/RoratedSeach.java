@@ -22,10 +22,10 @@ public class RoratedSeach {
                return search(arr,target,mid+1,e);
             }
         }
+
         if(arr[mid]<=target && target<=arr[e]){
             search(arr,target,mid+1,e);
         }
-
            return search(arr,target,s,mid-1);
     }
 }

@@ -1,7 +1,7 @@
 package com.Rohit.Sort;
 import java.util.Arrays;
 
-import static com.Rohit.arrays.Swap.swap;
+import static com.Rohit.arrays.Practice.Swap.swap;
 
 public class Bubble {
     public static void main(String[] args) {

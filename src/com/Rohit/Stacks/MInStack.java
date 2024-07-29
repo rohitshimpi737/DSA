@@ -3,9 +3,8 @@ import java.util.Stack;
 public class MInStack {
         Stack<Integer> st = new Stack<>();
        private int min = 0;
-
         public void push(int val) {
-            if (st.size() == 0) {
+            if (st.isEmpty()) {
                 st.push(val);
                 min = val;
             } else if (min <= val) {
@@ -17,7 +16,7 @@ public class MInStack {
         }
 
         public void pop() {
-            if (st.size() == 0) return;
+            if (st.isEmpty()) return;
             else if (st.peek() > min) {
                 st.pop();
             } else if (st.peek() < min) {
@@ -27,7 +26,7 @@ public class MInStack {
         }
 
         public int peek() {
-            if (st.size() == 0) return -1;
+            if (st.isEmpty()) return -1;
             else if (st.peek() > min) {
                 return st.peek();
             } else if (st.peek() <= min) {
@@ -40,17 +39,17 @@ public class MInStack {
         }
 
         public int getMin() {
-            if (st.size() == 0) return -1;
+            if (st.isEmpty()) return -1;
             return min;
         }
     public static void main(String[] args) {
      MInStack rt=new MInStack();
-        rt.push(7);
-        rt.push(8);
-        rt.push(5);
         rt.push(6);
-        rt.push(3);
+        rt.push(5);
         rt.push(4);
+        rt.push(3);
+        rt.push(2);
+        rt.push(1);
         rt.display();
         System.out.println(rt.getMin());
         rt.pop();
@@ -63,9 +62,6 @@ public class MInStack {
         System.out.println(rt.getMin());
         rt.pop();
         System.out.println(rt.getMin());
-
-
-
     }
 
 }

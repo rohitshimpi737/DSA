@@ -3,6 +3,7 @@ package com.Rohit.String;
 import java.util.ArrayList;
 import  java.util.List;
 public class PalindromicSubstrings {
+
     public static List<String> findAllPalindromicSubstrings(String str) {
         List<String> palindromes = new ArrayList<>();
         int n = str.length();
@@ -26,7 +27,8 @@ public class PalindromicSubstrings {
         }
     }
     public static void main(String[] args) {
-        String s="111";
+        String s="ababbbabbababa";
         System.out.println(findAllPalindromicSubstrings(s));
+
     }
 }

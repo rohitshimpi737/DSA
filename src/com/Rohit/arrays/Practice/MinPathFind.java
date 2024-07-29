@@ -1,4 +1,4 @@
-package com.Rohit.arrays;
+package com.Rohit.arrays.Practice;
 
 public class MinPathFind {
         public static  int minFallingPathSum(int[][] A) {

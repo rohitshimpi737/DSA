@@ -1,8 +1,8 @@
 package com.Rohit.LinkedList;
 public class LinkedList {
-    private Node head;
+     Node head;
     private Node tail=null;
-    private int size;
+     int size;
     public LinkedList() {
         this.size = 0;
     }
@@ -133,9 +133,7 @@ public class LinkedList {
         }
         return null ;
     }
-
-
-    private  class Node {
+    class Node {
         private int value ;
         private Node next;
 

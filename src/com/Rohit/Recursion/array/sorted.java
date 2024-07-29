@@ -15,4 +15,5 @@ public class sorted {
         }
         return arr[index]<arr[index+1] && check(arr,index+1);
     }
+
 }

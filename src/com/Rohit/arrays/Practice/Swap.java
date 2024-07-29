@@ -1,4 +1,4 @@
-package com.Rohit.arrays;
+package com.Rohit.arrays.Practice;
 
 import java.util.Arrays;
 

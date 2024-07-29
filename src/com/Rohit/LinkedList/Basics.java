@@ -1,6 +1,10 @@
 package com.Rohit.LinkedList;
 
 public class Basics {
+    public  static  Node createHead(int data){
+        Node Node= new Node(data);
+        return  Node;
+    }
     public static void insertAtEnd(Node head,int data) {
         Node node= new Node(data);
         Node temp=head;
@@ -17,7 +21,7 @@ public class Basics {
             temp = temp.next;
         }
     }
-        public static void displayRec(Node head){
+    public static void displayRec(Node head){
             if (head==null){
                 return;
             }
@@ -69,14 +73,12 @@ public class Basics {
         }
         return prev;
     }
-
     public  static class Node {
         int data;
         Node next;
         public Node(int data) {
             this.data = data;
         }
-
 
     }
 

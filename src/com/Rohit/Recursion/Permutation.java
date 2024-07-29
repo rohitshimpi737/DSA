@@ -21,7 +21,6 @@ public class Permutation {
             permutation(f+ch+s,up.substring(1));
         }
     }
-
     public static   ArrayList<String>  permutationList(String p, String up) {
         if (up.isEmpty()) {
             ArrayList<String> list = new ArrayList<>();

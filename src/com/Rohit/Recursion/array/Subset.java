@@ -21,18 +21,22 @@ public class Subset {
         curr.remove(curr.size() - 1);
         getSubset(index + 1, arr, curr, ans);
     }
+
     public static void getUniqueSubset(int []arr){
         Arrays.sort(arr);
         Set<List<Integer>> mySet= new HashSet<>();
         getUniqueSubset(0,arr,new ArrayList<>(),mySet);
     }
+
     private static void getUniqueSubset(int index, int[] arr, ArrayList<Integer> curr, Set<List<Integer>> ans) {
             ans.add(new ArrayList<>(curr));
+            
         curr.add(arr[index]);
         getUniqueSubset(index + 1, arr, curr, ans);
 
         curr.remove(curr.size() - 1);
         getUniqueSubset(index + 1, arr, curr, ans);
+
 
         // this laso another method to do so
 //        for(int i=index;i<nums.length;i++){
@@ -61,12 +65,25 @@ public class Subset {
         return largestSub;
     }
 
+    public static ArrayList<ArrayList<Integer>> subsetItr(int[] arr) {
+        ArrayList<ArrayList<Integer>> outer = new ArrayList<>();
+        outer.add(new ArrayList<>());
+        for (int num : arr) {
+            int size = outer.size();
+            for (int j = 0; j < size; j++) {
+                ArrayList<Integer> inner = new ArrayList<>(outer.get(j));
+                inner.add(num);
+                outer.add(inner);
+            }
+        }
+        return outer;
+    }
     public static void main(String[] args) {
-//        int[] arr = {3, 4, 16, 8};
-//        Arrays.sort(arr);
-//        List<List<Integer>> ans = subset(arr);
-//        System.out.println(ans);
-//        System.out.println(largestDivisibleSub(ans));
-        System.out.println( Math.addExact(2,3));
+        int[] arr = {1,2,3};
+        Arrays.sort(arr);
+        List<List<Integer>> ans = subset(arr);
+        System.out.println(ans);
+        //System.out.println(largestDivisibleSub(ans));
+        //System.out.println( Math.addExact(2,3));
     }
 }

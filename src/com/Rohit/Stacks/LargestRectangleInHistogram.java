@@ -30,16 +30,18 @@ public class LargestRectangleInHistogram {
             else pse[i] = st.peek();
             st.push(i);
         }
+
         //maxarea of rectangle
         int max = -1;
         for (int i = 0; i < n; i++) {
             int area = heights[i] * (nse[i] - pse[i] - 1);
+            System.out.println(area);
             max = Math.max(max, area);
         }
         return max;
     }
     public static void main(String[] args) {
-        int[] heights = {1,8,6,2,5,4,8,3,7};
+        int[] heights = {5,2,4,6,3,5};
         int ans = largestRectangleArea(heights);
         System.out.println(ans);
     }
