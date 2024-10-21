@@ -1,10 +1,16 @@
 package com.Rohit.Queue;
 
 public class Queue {
-    int r=-1;
+    private final int[] data;
     int f=-1;
-    int []data=new int [100];
-    int size=0;
+    int r=-1;
+    int size;
+    int totalSize;
+    Queue(int totalSize){
+        this.totalSize=totalSize;
+        data = new int[totalSize];
+        this.size=0;
+    }
 
     public void  add(int val){
         if(r== data.length-1) {
@@ -44,11 +50,10 @@ public void display(){
         }
 }
 public boolean isEmpty(){
-        if (size==0)return true;
-        return false;
+    return size == 0;
 }
     public static void main(String[] args) {
-        Queue q=new Queue();
+        Queue q=new Queue(5);
 //        q.add(3);
 //        q.add(4);
 //        q.add(5);

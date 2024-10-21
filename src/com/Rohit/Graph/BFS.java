@@ -17,7 +17,6 @@ public class BFS {
     public static void createGraph(ArrayList<Edge> gh[]){
         for (int i = 0; i < gh.length ; i++) {
             gh[i] = new ArrayList<Edge>();
-
         }
         gh[0].add(new Edge(0,1));
         gh[0].add(new Edge(0,2));
@@ -91,6 +90,7 @@ public class BFS {
             }
         }
     }
+
     public static void main(String[] args) {
         int V=8;
         ArrayList<Edge> []gh =new ArrayList[V];

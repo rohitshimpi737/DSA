@@ -19,6 +19,7 @@ public class NextSmallerElemnt {
 
             st.push(arr[i]);
         }
+
         return res;
     }
     public static void main(String[] args) {

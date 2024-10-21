@@ -9,9 +9,8 @@ public class EvaluationOfPostfix {
         Stack<Integer> val = new Stack<>();
         for (int i = 0; i < s.length();i++){
             char ch= s.charAt(i);
-            int ascii=(int)ch;
-            if(ascii>=48&&ascii<=57){
-                val.push(ascii-48);
+            if((int)ch >=48&& (int)ch <=57){
+                val.push((int)ch -48);
             }
             else{
                 int val2=val.pop();

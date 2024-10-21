@@ -31,7 +31,7 @@ public class Quetions {
         return num;
     }
     public static int countBalancedBracket(String S ){
-        if(balancedBracket(S)==true) return 0;
+        if(balancedBracket(S)) return 0;
 
         Stack<Character> st=new Stack<>();
         for (int i = 0; i <S.length() ; i++) {

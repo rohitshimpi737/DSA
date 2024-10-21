@@ -16,7 +16,6 @@ public class graph {
 public static void createGraph(ArrayList<Edge> gh[]){
     for (int i = 0; i < gh.length ; i++) {
         gh[i] = new ArrayList<Edge>();
-
     }
         gh[0].add(new Edge(0,2,4));
 

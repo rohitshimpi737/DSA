@@ -1,16 +1,12 @@
-package com.Rohit.Stacks.InfixPefixPostfix;
+package com.Rohit.Stacks.Practice;
 
 import java.util.Stack;
 
-public class InfixWithBracket {
-    public static void main(String[] args) {
-        String s = "9-(5+3)*4/6";
-//        String s="9-5+3*4/6";
-//        String s="5+6*(4-3)/5";
-        Stack<Integer> val = new Stack<>();
-        Stack<Character> op = new Stack<>();
-        for (int i = 0; i < s.length(); i++) {
-            char ch = s.charAt(i);
+public class InfixEvalution {
+    public static int infixEvaluation(String infix){
+        Stack<Integer> val= new Stack<>();
+        Stack<Character> op= new Stack<>();
+        for (char ch: infix.toCharArray()) {
             if ((int) ch >= 48 && (int) ch <= 57) val.push((int) ch - 48);
             else if (op.isEmpty() || ch == '(' || op.peek()=='(') {
                 op.push(ch);
@@ -47,7 +43,6 @@ public class InfixWithBracket {
                 }
             }
         }
-
         while (val.size() > 1) {
             int val2 = val.pop();
             int val1 = val.pop();
@@ -57,7 +52,11 @@ public class InfixWithBracket {
             if (op.peek() == '/') val.push(val1 / val2);
             op.pop();
         }
-        System.out.println(val.peek());
+        return val.peek();
+    }
+    public static void main(String[] args) {
+//        String s="9-5+3*4/6";
+        String s="(9-(((5+3)*4)/6))";
+        System.out.println(infixEvaluation(s));
     }
 }
-

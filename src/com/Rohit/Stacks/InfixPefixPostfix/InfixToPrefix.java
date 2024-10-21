@@ -6,8 +6,8 @@ import java.util.Stack;
 public class InfixToPrefix {
     public static void main(String[] args) {
 
-        String s = "9-(5+3)*4/6";
-//        String s="5+6*(2-9)/5";
+//        String s = "9-(5+3)*4/6";
+        String s="5+6*(2-9)/5";
         Stack<String> val = new Stack<>();
         Stack<Character> op = new Stack<>();
         System.out.println(s);

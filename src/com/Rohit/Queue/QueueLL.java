@@ -22,10 +22,8 @@ public class Node {
     Node(int val, Node head) {
         this.val = val;
         this.next = head;
-    }
-
+    } 
 }
-
     public void  add(int val) {
       Node newNode =new Node(val);
       if(head==null){
@@ -43,8 +41,7 @@ public class Node {
             System.out.println("Queue is full");
             return -1;
         }
-        int x= head.val;
-        return x;
+        return head.val;
     }
     public int remove(){
         if(size==0){
